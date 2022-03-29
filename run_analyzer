@@ -1,0 +1,13 @@
+#!/bin/bash
+set -o pipefail
+set -eu
+
+main() {
+	cd /src
+	bear -- make
+	mkdir -p /config
+	cp check_rules /config
+	/opt/naivesystems/misra_analyzer -show_results
+}
+
+main "$@"

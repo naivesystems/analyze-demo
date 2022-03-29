@@ -1,0 +1,1 @@
+podman run -v $PWD:/src:O -v $PWD/out:/output:Z ccr.ccs.tencentyun.com/naivesystems/analyze:2022.1.0.0 /src/run_analyzer
