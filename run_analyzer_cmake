@@ -1,0 +1,12 @@
+#!/bin/bash
+set -o pipefail
+set -eu
+
+main() {
+	cd /src
+	mkdir -p /config
+	cp check_rules /config
+	/opt/naivesystems/misra_analyzer -show_results -project_type=cmake
+}
+
+main "$@"
