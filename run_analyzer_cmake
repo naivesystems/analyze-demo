@@ -3,6 +3,9 @@ set -o pipefail
 set -eu
 
 main() {
+	cd /src
+	mkdir -p /config
+	cp .naivesystems/check_rules /config
 	/opt/naivesystems/misra_analyzer -show_results -project_type=cmake
 }
 
