@@ -1,5 +1,7 @@
 #include <stdint.h>
 
+#include "demo_ctu.h"
+
 extern int16_t func_param_without_name(int16_t);
 
 /*      12345678901234567890123456789012******* */
