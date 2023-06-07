@@ -25,6 +25,6 @@ int main(void) {
 		int i;
 		long long j;
 	} a = {0};
-	a.i = a.j;
+	a.i = a.j;// test
 	return 0;
 }
