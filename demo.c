@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#include "demo.h"
 #include "demo_ctu.h"
 
 extern int16_t func_param_without_name(int16_t);
@@ -54,7 +55,7 @@ void overrun_ctu() {
 	overrun2(x);
 }
 
-extern int extern_x;
+int extern_x;
 
 int some_function() {
 	if(extern_x > 0) {
