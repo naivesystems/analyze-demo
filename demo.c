@@ -76,6 +76,6 @@ int main(void) {
 		int i;
 		long long j;
 	} a = {0};
-	a.i = a.j; // test
+	a.i = a.j;
 	return 0;
 }
