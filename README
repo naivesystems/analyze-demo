@@ -1,11 +1,1 @@
-mkdir -p output && \
-podman run -v $PWD:/src:O -v $PWD/.naivesystems:/config:Z \
-  -v $PWD/output:/output:Z \
-  ccr.ccs.tencentyun.com/naivesystems/analyze:2022.1.0.515002 \
-  /opt/naivesystems/misra_analyzer -show_results
-
-mkdir -p output && \
-podman run -v $PWD:/src:O -v $PWD/.naivesystems:/config:Z \
-  -v $PWD/output:/output:Z \
-  ccr.ccs.tencentyun.com/naivesystems/analyze:2022.1.0.515002 \
-  /opt/naivesystems/misra_analyzer -show_results -project_type=cmake
+See also: https://github.com/naivesystems/analyze
