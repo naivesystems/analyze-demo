@@ -13,9 +13,9 @@ $ podman run --rm \
   -v $PWD:/src:O \
   -v $PWD/.naivesystems:/config:Z \
   -v $PWD/output:/output:Z \
-  ghcr.io/naivesystems/analyze:2023.3.3.0 \
+  ghcr.io/naivesystems/analyze:latest \
   /opt/naivesystems/misra_analyzer -show_results
-Trying to pull ghcr.io/naivesystems/analyze:2023.3.3.0...
+Trying to pull ghcr.io/naivesystems/analyze:latest...
 Getting image source signatures
 Copying blob e4fec82c57db skipped: already exists
 Copying blob c7bef7d09442 skipped: already exists
