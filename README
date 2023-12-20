@@ -1,1 +1,119 @@
+$ git clone https://github.com/naivesystems/analyze-demo.git
+Cloning into 'analyze-demo'...
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 55 (delta 9), reused 6 (delta 6), pack-reused 44
+Receiving objects: 100% (55/55), 5.93 KiB | 5.93 MiB/s, done.
+Resolving deltas: 100% (22/22), done.
+
+$ cd analyze-demo/
+$ mkdir -p output
+$ podman run --rm \
+  -v $PWD:/src:O \
+  -v $PWD/.naivesystems:/config:Z \
+  -v $PWD/output:/output:Z \
+  ghcr.io/naivesystems/analyze:2023.3.3.0 \
+  /opt/naivesystems/misra_analyzer -show_results
+Trying to pull ghcr.io/naivesystems/analyze:2023.3.3.0...
+Getting image source signatures
+Copying blob e4fec82c57db skipped: already exists
+Copying blob c7bef7d09442 skipped: already exists
+Copying blob ee26927f7dc5 skipped: already exists
+Copying blob 23753d8656b6 skipped: already exists
+Copying blob 7e97d177993c skipped: already exists
+Copying blob 4986101d78ad skipped: already exists
+Copying blob c850ced4ffbf skipped: already exists
+Copying blob 42d1e4b1975b skipped: already exists
+Copying blob 7823ac0c26ca skipped: already exists
+Copying blob 339afb416e25 skipped: already exists
+Copying blob 75541a636a81 skipped: already exists
+Copying blob d2a917738d51 skipped: already exists
+Copying blob 0b831c8be57d skipped: already exists
+Copying blob ef08e4544fbd skipped: already exists
+Copying blob 7ef42a3c56e3 skipped: already exists
+Copying blob d54d6abace37 skipped: already exists
+Copying blob 001584087c98 skipped: already exists
+Copying blob 4c0162b8bfb5 skipped: already exists
+Copying blob 043d316ed7d1 skipped: already exists
+Copying blob 3fcb6ef10b32 skipped: already exists
+Copying blob e7be414aed0b skipped: already exists
+Copying blob 37f184bfef28 done
+Copying blob e02b7aea60de done
+Copying blob 5a939ca15fd2 done
+Copying blob a3be7da5d7b3 done
+Copying config df19c65379 done
+Writing manifest to image destination
+(c) 2023 Naive Systems Ltd.
+2023-12-20 07:05:07 Start to generate compilation database
+2023-12-20 07:05:07 74 lines of C code
+2023-12-20 07:05:07 0 lines of C++ code
+2023-12-20 07:05:07 3 lines of headers
+2023-12-20 07:05:07 Start parsing compilation database
+2023-12-20 07:05:07 Start preprocessing C/C++ files
+2023-12-20 07:05:07 Start preparing CTU information
+2023-12-20 07:05:07 25% BuildAction preparation completed (1/4)
+2023-12-20 07:05:07 50% BuildAction preparation completed (2/4)
+2023-12-20 07:05:07 75% BuildAction preparation completed (3/4)
+2023-12-20 07:05:07 100% BuildAction preparation completed (4/4)
+2023-12-20 07:05:07 BuildAction preparation completed [0s]
+2023-12-20 07:05:07 Starting generating CTU infomation
+2023-12-20 07:05:07 50% CTU information generated (1/2)
+2023-12-20 07:05:07 100% CTU information generated (2/2)
+2023-12-20 07:05:07 CTU information generated successfully [0.76s]
+2023-12-20 07:05:07 Starting writing CTU information
+2023-12-20 07:05:07 Writing CTU information completed [0s]
+2023-12-20 07:05:07 CTU information preparation completed [0.78s]
+2023-12-20 07:05:07 Start preparing STU information
+2023-12-20 07:05:07 50% STU information preparation completed (1/2)
+2023-12-20 07:05:07 100% STU information preparation completed (2/2)
+2023-12-20 07:05:07 STU information preparation completed [0.42s]
+2023-12-20 07:05:07 Preprocessing C/C++ files completed [0.206s]
+2023-12-20 07:05:07 Start analyzing C/C++ files
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_5_1 (1/11)
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_5_2 (2/11)
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_7_1 (3/11)
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_8_2 (4/11)
+2023-12-20 07:05:07 Analysis of misra_c_2012/rule_5_1 completed (9%, 1/11) [0.36s]
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_9_3 (5/11)
+2023-12-20 07:05:07 Analysis of misra_c_2012/rule_8_2 completed (18%, 2/11) [0.5s]
+2023-12-20 07:05:07 Start analyzing for misra_c_2012/rule_12_4 (6/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_12_4 completed (27%, 3/11) [0.259s]
+2023-12-20 07:05:08 Start analyzing for misra_c_2012/rule_18_1 (7/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_7_1 completed (36%, 4/11) [0.313s]
+2023-12-20 07:05:08 Start analyzing for misra_c_2012/rule_19_1 (8/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_9_3 completed (45%, 5/11) [0.28s]
+2023-12-20 07:05:08 Start analyzing for misra_c_2012/rule_19_2 (9/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_5_2 completed (54%, 6/11) [0.317s]
+2023-12-20 07:05:08 Start analyzing for misra_c_2012/rule_22_1 (10/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_18_1 completed (63%, 7/11) [0.205s]
+2023-12-20 07:05:08 Start analyzing for misra_c_2012/rule_22_6 (11/11)
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_19_1 completed (72%, 8/11) [0.25s]
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_19_2 completed (81%, 9/11) [0.265s]
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_22_6 completed (90%, 10/11) [0.9s]
+2023-12-20 07:05:08 Analysis of misra_c_2012/rule_22_1 completed (100%, 11/11) [0.739s]
+2023-12-20 07:05:08 Analyzing C/C++ files completed [1.58s]
+/src/demo.c:8: [C0513][misra-c2012-8.2]: Violation of MISRA C:2012 Rule 8.2: Function types shall be in prototype form with named parameters (The function "func_param_without_name" has unnamed parameter(s))
+/src/demo.c:12: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'engine_exhaust_gas_temperature_scaled' and 'engine_exhaust_gas_temperature_raw' at /src/demo.c:12:9 and /src/demo.c:11:9 are not distinct)
+/src/demo.c:13: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'engine_exhaust_gas_temp_raw' and 'engine_exhaust_gas_temperature_raw' at /src/demo.c:13:9 and /src/demo.c:11:9 are not distinct)
+/src/demo.c:14: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'engine_exhaust_gas_temp_scaled' and 'engine_exhaust_gas_temperature_raw' at /src/demo.c:14:9 and /src/demo.c:11:9 are not distinct)
+/src/demo.c:16: [C1203][misra-c2012-9.3]: Violation of MISRA C:2012 Rule 9.3: Arrays shall not be partially initialized
+/src/demo.c:19: [C0904][misra-c2012-7.1]: Violation of MISRA C:2012 Rule 7.1: Octal constants shall not be used
+/src/demo.c:34: [C0205][misra-c2012-22.6]: Violation of MISRA C:2012 Rule 22.6: The value of a pointer to a FILE shall not be used after the associated stream has been closed: Use closed FILE stream
+/src/demo.c:39: [C0210][misra-c2012-22.1]: Violation of MISRA C:2012 Rule 22.1: All resources obtained dynamically by means of Standard Library functions shall be explicitly released: Potential leak of memory pointed to by 'b'
+/src/demo.c:42: [C1308][misra-c2012-18.1]: Violation of MISRA C:2012 Rule 18.1: A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand: Pointer arithmetic may result in the pointer addressing a different array
+/src/demo.c:46: [C0513][misra-c2012-8.2]: Violation of MISRA C:2012 Rule 8.2: Function types shall be in prototype form with named parameters (missing 'void' in function "overrun_when_calling_function")
+/src/demo.c:46: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'overrun_when_calling_function' and 'overrun' at /src/demo.c:46:6 and /src/demo.c:41:6 are not distinct)
+/src/demo.c:52: [C0513][misra-c2012-8.2]: Violation of MISRA C:2012 Rule 8.2: Function types shall be in prototype form with named parameters (missing 'void' in function "overrun_ctu")
+/src/demo.c:52: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'overrun_ctu' and 'overrun' at /src/demo.c:52:6 and /src/demo.c:41:6 are not distinct)
+/src/demo.c:60: [C0513][misra-c2012-8.2]: Violation of MISRA C:2012 Rule 8.2: Function types shall be in prototype form with named parameters (missing 'void' in function "some_function")
+/src/demo.c:68: [C0513][misra-c2012-8.2]: Violation of MISRA C:2012 Rule 8.2: Function types shall be in prototype form with named parameters (missing 'void' in function "basic_negative")
+/src/demo.c:71: [C1308][misra-c2012-18.1]: Violation of MISRA C:2012 Rule 18.1: A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand: Pointer arithmetic may result in the pointer addressing a different array
+/src/demo.c:75: [C0301][misra-c2012-19.2]: Violation of MISRA C:2012 Rule 19.2: The union keyword should not be used
+/src/demo.c:79: [C0302][misra-c2012-19.1]: Violation of MISRA C:2012 Rule 19.1, assign or copy is overlapped
+/src/demo_ctu.c:8: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'test_wrap_around_with_extremely_long_name' and 'test_wrap_around' at /src/demo_ctu.c:8:6 and /src/demo.c:24:6 are not distinct)
+/src/demo_ctu.c:12: [C1109][misra-c2012-5.1]: Violation of MISRA C:2012 Rule 5.1: External identifiers shall be distinct (The identifiers 'overrun2' and 'overrun' at /src/demo_ctu.c:12:6 and /src/demo.c:41:6 are not distinct)
+/src/demo_ctu.c:13: [C1308][misra-c2012-18.1]: Violation of MISRA C:2012 Rule 18.1: A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand: Pointer arithmetic may result in the pointer addressing a different array
+2023-12-20 07:05:08 Total time for analysis: 1.289s
+
 See also: https://github.com/naivesystems/analyze
